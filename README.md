@@ -55,8 +55,8 @@ Operadora telecom precisa reduzir churn de 14.6% identificando clientes de risco
 | `01_preparacao_ambiente.py` | Bibliotecas + pastas | 7 pastas criadas |
 | `02_carregamento_inspecao.py` | Load + EDA inicial | `outputs/metrics/01_resumo.json` |
 | `03_limpeza_dados.py` | Duplicatas + padronização | `data/processed/03_dados_limpos.csv` |
-| `04_eda_exploratoria.py` | **Análises completas** | 11 gráficos + 9 tabelas KPIs |
-| `05_metricas_powerbi.py` | **KPIs para dashboard** | `data/dashboard/telecom_churn_completo.csv`
+| `04_eda_exploratoria.py` | Análises completas | 11 gráficos + 9 tabelas KPIs |
+| `05_metricas_powerbi.py` | KPIs para dashboard | `data/dashboard/telecom_churn_completo.csv`
 
 **Estrutura de pastas:**
 
@@ -71,6 +71,16 @@ Operadora telecom precisa reduzir churn de 14.6% identificando clientes de risco
 │   ├── limpeza_dados.py
 │   ├── eda_exploratoria.py
 │   └── metricas_powerbi.py
+├── Pycharm/
+│   └── plot
+│        └── 01_distribuicao_churn.png
+│        └── 02_distribuicoes_univariadas.png
+│        └── 03_churn_international_plan.png
+│        └── 04_churn_voicemail_plan.png
+│        └── 05_churn_customer_service.png
+│        └── 06_heatmap_correlacao.png
+│        └── 07_boxplots_comparacao.png
+│        └── 08_churn_segmento_risco.png
 ├── dashboard/
 │   └── dashboard_churn_telecom.pdf
 └── README.md
@@ -82,17 +92,17 @@ Operadora telecom precisa reduzir churn de 14.6% identificando clientes de risco
 ### **4.1. Fatores Críticos de Churn**
 | Fator | Churn % | Benchmark Mercado | Insight |
 |-------|---------|-------------------|---------|
-| **Plano Internacional** | **43.7%** | 40-71% | **4x maior** que plano básico (11.3%) |
-| **4 chamadas suporte** | **52.9%** | ~50% | Ponto de inflexão: 0-3 chamadas = 10% |
-| **Voice Mail Plan** | **8.9%** | - | **Protege**: reduz 47% churn |
-| **8-9 chamadas suporte** | **100%** | - | Clientes já perdidos
+| **Plano Internacional** | 43.7% | 40-71% | 4x maior que plano básico (11.3%) |
+| **4 chamadas suporte** | 52.9%| ~50% | Ponto de inflexão: 0-3 chamadas = 10% |
+| **Voice Mail Plan** | 8.9% | - | Protege: reduz 47% churn |
+| **8-9 chamadas suporte** | 100% | - | Clientes já perdidos
 
 ### **4.2. Segmentação de Risco (Criada por mim)**
 | Segmento | Clientes | Churn % | Critério |
 |----------|----------|---------|----------|
-| **Alto** | **22** | **68.2%** | Intl Plan + 4+ chamadas |
-| **Médio** | **750** | **29.7%** | Intl Plan OU 3+ chamadas |
-| **Baixo** | **1.894** | **7.9%** | Sem fatores risco
+| **Alto** | 22 | 68.2% | Intl Plan + 4+ chamadas |
+| **Médio** | 750 | 29.7% | Intl Plan OU 3+ chamadas |
+| **Baixo** | 1.894 | 7.9% | Sem fatores risco
 
 ### **4.3. Correlações com Churn**
 
@@ -104,9 +114,9 @@ Operadora telecom precisa reduzir churn de 14.6% identificando clientes de risco
 ### **4.4. Estados Críticos (Top 10 churn)**
 | Estado | Taxa Churn | Clientes |
 |--------|------------|----------|
-| **TX** | **29.1%** | 55 |
-| **NJ** | **28.0%** | 50 |
-| **AR** | **23.4%** | 47
+| **TX** | 29.1% | 55 |
+| **NJ** | 28.0% | 50 |
+| **AR** | 23.4% | 47
 
 ---
 
